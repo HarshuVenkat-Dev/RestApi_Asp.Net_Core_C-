@@ -12,33 +12,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Song"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Song"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Song"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -59,6 +33,21 @@
               }
             },
             "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
+            },
+            "application/*+xml": {
               "schema": {
                 "$ref": "#/components/schemas/Song"
               }
@@ -125,6 +114,21 @@
               "schema": {
                 "$ref": "#/components/schemas/Song"
               }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
+            },
+            "application/*+xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
             }
           }
         },
@@ -171,6 +175,10 @@
             "nullable": true
           },
           "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
             "type": "string",
             "nullable": true
           }
